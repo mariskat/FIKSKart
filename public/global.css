@@ -1,0 +1,369 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden !important;
+
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background: #f9f8f8;
+}
+
+main {
+	display: flex;
+	overflow: hidden;
+	flex-direction: column; 
+    width: 100%;
+    height: 100%;
+	background: #f9f8f8;
+  }
+
+  navigationButtons {
+    display: flex;
+    flex-direction: row;
+	align-self: flex-end;
+	width:fit-content;
+	margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+input[type="range"] {
+	height: 0;
+}
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+button:disabled {
+	color: #999;
+}
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+button:focus {
+	border-color: #666;
+}
+
+
+/* FONTS */
+title {
+	display: flex;
+    align-items: center;
+	color: #004245;
+	font-weight: bold;
+    font-style: normal;
+	font-size: 36px;
+	width: max-content !important;
+}
+
+smallBoldText {
+    font-weight: 500;
+    font-size: 2vh;
+    line-height: 2vh;
+}
+
+smallNormalText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vh;
+}
+
+smallCapsText {
+	font-weight: 300;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+}
+
+nextButtonText {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	width: 185px;
+	padding: 1.5vh;
+	padding-left: 3vh;
+	padding-right: 0vh;
+}
+
+backButtonText {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	width: 185px;
+	padding: 1.5vh;
+	padding-right: 3vh;
+	padding-left: 0vh;
+}
+
+/* HELP FUNCTIONALITY */
+smallNormalText.submit-text {
+    background: #6d6d6d;
+    color: #ffffff;
+    font-size: 1.8vh;
+	text-align: center;
+	font-style: normal;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1em;
+    margin-bottom: 0.5em;
+  }
+
+.help-box {
+	display: inline-flex;
+    flex-direction: column;
+	width: fit-content;
+	display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+  
+/* INFO BUTTON*/
+button.info {
+	border: none;
+	background: inherit;
+    width: 30px;
+	height: 30px;
+	margin-top: 1.5vh;
+	margin-left: 1vh;
+}
+
+button.info:active{
+    background:inherit; 
+}
+
+button.info:hover {
+    opacity: 0.7;
+}
+
+
+/* INPUT FIELDS*/
+input {
+    height: 4.5vh;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+	border-radius: 8px;
+	color: #004245;
+    font-size: 1.5vh;
+	padding-left: 1em;
+}
+input:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+input:focus {
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+::placeholder {
+    color: #004245;
+    font-weight: 100;
+    font-size: 1.5vh;
+}
+
+/* BUTTONS */
+
+/* Buttons on map*/
+.leaflet-bar a {
+	background-color: #FFFFFF !important;
+	border-radius: 2px;
+}
+.leaflet-bar a:hover {
+	background-color: #DFF6F5 !important;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+/*.leaflet-pm-toolbar .leaflet-pm-icon-edit {
+	background-image: url("./favicon.png") !important;
+}*/
+.leaflet-pm-toolbar .leaflet-pm-icon-polygon {
+	background-image: url("./images/polygon.png") !important;
+}
+.leaflet-pm-toolbar .leaflet-pm-icon-polygon {
+	background-image: url("./images/polygon.png") !important;
+}
+.leaflet-pm-toolbar .leaflet-pm-icon-delete {
+	background-image: url("./images/undo.png") !important;
+}
+.active .leaflet-buttons-control-button {
+	  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25)  !important;
+	  background-color: #DFF6F5 !important;
+}
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+	color: #6D6D6D !important;
+}
+.control-icon.customToolUndoLastChange {
+	background-image: url("./images/undo.png") !important;
+}
+
+.control-icon.customToolUndo {
+	background-image: url("./images/undo.png") !important;
+}
+
+.leaflet-pm-toolbar .button-container:first-child .leaflet-buttons-control-button {
+	height: 30px !important;
+	width: 30px !important;
+}
+.leaflet-pm-toolbar .button-container .leaflet-buttons-control-button {
+	height: 30px !important;
+	width: 30px !important;
+}
+
+
+.marker-icon, .marker-icon:focus {
+	background: #60D0CB !important;
+	border: 1px solid #60D0CB !important;
+	box-sizing: border-box !important;
+}
+.leaflet-control-attribution.leaflet-control {
+	  display: none !important;
+}
+
+.dropzone.svelte-817dg2:hover {
+    border: 2px dashed #b2efec !important;
+  }
+/* Other */
+button.backButton {
+display: flex;
+flex-direction: row;
+align-items: center;
+width: fit-content;
+height: fit-content;
+border:  2px solid #60d0cb00;
+background: inherit;
+text-decoration: none;
+}
+
+button.backButton:hover {
+	border: 2px solid #60d0cb;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+button.nextButton {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: fit-content;
+	height: fit-content;
+	border: 2px solid transparent;
+	background: #b2efec;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+button.nextButton:hover {
+	background: #60d0cb;
+	}
+
+button.bigButton {
+	color: #004245;
+	font-size: 2.5vh;
+	font-weight: bold;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: #fcfcfc;
+	width: 40vh;
+	height: 12vh;
+	margin-top: 1vh;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	border-top: hidden;
+	}
+
+button.bigButton:hover {
+	cursor: pointer;
+	background-color: #60d0cb36;
+}
+
+button.bigButton:focus {
+	border: none;
+	background-color: #60d0cb36;
+}
+
+button.error:hover {
+	background: #e5e5e5;
+	border: 2px solid #f4624e;
+}
+
+button.error {
+	background: #e9e9e9;
+	border-radius: 8px solid #e9e9e9;
+	box-shadow: none;
+}
+
+/* LINES */
+
+lines {
+	border: 1px solid #dbdbdb;
+}
+
+
+/* VERTICAL BAR */ 
+verticalBar {
+	display: flex;
+	align-self: flex-start;
+	flex-direction: column;
+	width: 260px;
+	height: 100%;
+	background: #f9f8f8;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* IMAGES */
+img.info {
+	width: 20px;
+}
+img.backArrow {
+	height: 2vh;
+	margin-right: 4vh;
+}
+img.rightArrow {
+	height: 2vh;
+	margin-left: 2vh;
+}
+img.stepImage {
+	width: 27vh;
+	margin-top: 13vh;
+	margin-left: 2vh;
+}
